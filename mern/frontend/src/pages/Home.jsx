@@ -7,11 +7,17 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import ArticleTable from "../components/ArticleTable";
 import ArticleCard from "../components/ArticleCard";
+import SearchBar from '../components/SearchBar';
+import CategoryFilter from '../components/CategoryFilter';
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("cards");
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const categories = ["Arts", "Mathematics", "Technology"];
+
   useEffect(() => {
     setLoading(true);
     axios
@@ -25,6 +31,13 @@ const Home = () => {
         setLoading(false);
       });
   }, []);
+
+  const filteredArticles = articles.filter((article) => {
+    const keywordMatch = article.name.toLowerCase().includes(searchKeyword.toLowerCase());
+    const categoryMatch = !selectedCategory || article.category === selectedCategory;
+    return keywordMatch && categoryMatch;
+  });
+
   return (
     <div className="p-4">
       <div className="flex items-center justify-between">
@@ -48,12 +61,18 @@ const Home = () => {
         </button>
       </div>
 
+      <div className="flex gap-4 mt-4">
+        <CategoryFilter categories={categories} onSelectCategory={setSelectedCategory} />
+        <SearchBar onSearch={setSearchKeyword} />
+      </div>
+
+
       {loading ? (
         <Spinner />
       ) : showType === "cards" ? (
-        <ArticleCard articles={articles} />
+        <ArticleCard articles={filteredArticles} />
       ) : (
-        <ArticleTable articles={articles} />
+        <ArticleTable articles={filteredArticles} />
       )}
     </div>
   );
