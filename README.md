@@ -138,14 +138,14 @@ Once successfully started, you should see a message pointing to the frontend cli
 
 The **EduArchive** project is a collaborative effort involving the following team members:
 
-| Name                 | Role |
-| -------------------- | ---- |
-| Charles Canning      |      |
-| Pyper McCreanor-Rupe |      |
-| Gray Hawes           |      |
-| Ciar Smythe          |      |
-| Jethro Read          |      |
-| Maki Kamiya          |      |
+| Name                 | Project Roles                           |
+| -------------------- | --------------------------------------- |
+| Charles Canning      | Main Developer, Scrum Master (Backend)  |
+| Pyper McCreanor-Rupe | Main Developer, Scrum Master (Frontend) |
+| Gray Hawes           | Designer, Scrum Master (Frontend)       |
+| Ciar Smythe          | Main Developer, Scrum Master (Backend)  |
+| Jethro Read          | Designer, Scrum Master (Frontend)       |
+| Maki Kamiya          | Team Leader, Developer, GitHub Manager  |
 
 ### Tools
 
@@ -270,7 +270,14 @@ The **EduArchive** project is currently not bound by any specific license and is
 
 ## Acknowledgements
 
-(To be completed)
+The **EduArchive** project would not have been possible without the help and support of the following individuals, who our team heartily salute:
+
+- The team at Whitecliffe's School of Information Technology, who have shared their knowledge and expertise with us, and have been a source of inspiration and encouragement.
+- Our instructor, Bilal Ishfaq, who has been instrumental in guiding us through the course and the project, deepening our understanding and helping us develop our skills.
+- Our steadfast contributors, your essence is woven into every pixel and line of code. Your time, artistry, and brilliance have not just added layers – they’ve transformed the project.
+- The programmers and software engineers who have created the tools and technologies that have made this project possible - you are giants to us!
+- The myriad of developers, content creators and writers whose web articles, detailed tutorials, and documentation became our compass, steering us on our journey of discovery and learning.
+- Our friends and family, who have been a constant source of support and encouragement.
 
 ---
 
