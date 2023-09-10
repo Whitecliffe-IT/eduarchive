@@ -11,18 +11,18 @@ const ArticleCard = ({ articles }) => {
       {articles.map((item) => (
         <div
           key={item._id}
-          className="relative px-4 py-2 m-4 border-2 border-green-600 rounded-lg hover:shadow-lg"
+          className="relative px-4 py-2 m-4 border-2 border-green-600 rounded-lg bg-blue-300 hover:shadow-lg hover:bg-blue-400"
         >
           <h2 className="absolute px-2 py-1 text-xs bg-blue-200 rounded-md top-1 right-1">
             {item.category}
           </h2>
           <h4 className="my-2 text-xs text-gray-500">{item._id}</h4>
           <div className="flex items-center justify-start gap-x-2">
-            <BiUserCircle className="text-2xl text-blue-300" />
+            <BiUserCircle className="text-2xl text-black" />
             <h2 className="my-1">{item.name}</h2>
           </div>
           <div className="flex items-center justify-start gap-x-2">
-            <PiBookOpenTextLight className="text-2xl text-blue-300" />
+            <PiBookOpenTextLight className="text-2xl text-black" />
             <h2 className="my-1">{item.type}</h2>
           </div>
           <div className="flex items-center justify-between p-4 mt-4 gap-x-2">
