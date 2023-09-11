@@ -14,9 +14,9 @@ function SearchBar({ onSearch }) {
         placeholder="Search by keyword"
         value={searchKeyword}
         onChange={(e) => setSearchKeyword(e.target.value)}
-        className='bg-green-300 p-1 placeholder:text-gray-700'
+        className='bg-green-600 p-1 placeholder:text-black'
       />
-      <button onClick={handleSearch} className='bg-green-300 p-1 hover:bg-green-400 mx-4 rounded'>Search</button>
+      <button onClick={handleSearch} className='bg-green-600 p-1 hover:bg-green-400 mx-4 rounded'>Search</button>
     </div>
   );
 }

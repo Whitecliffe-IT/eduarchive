@@ -57,20 +57,20 @@ const Home = () => {
       </div>
       <div className="flex items-center gap-x-4">
         <button
-          className="px-4 py-1 bg-green-300 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-600"
           onClick={() => setShowType("cards")}
         >
           Cards
         </button>
         <button
-          className="px-4 py-1 bg-green-300 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-600"
           onClick={() => setShowType("table")}
         >
           Table
         </button>
       </div>
 
-        <div className="flex gap-4 border-b-2 h-10 justify-center">
+        <div className="flex gap-4 border-b-2 border-gray-400 h-10 justify-center">
           <CategoryFilter
             categories={categories}
             onSelectCategory={setSelectedCategory}
