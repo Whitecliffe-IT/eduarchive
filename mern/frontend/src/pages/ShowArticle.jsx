@@ -25,16 +25,15 @@ const ShowArticle = () => {
 
   return (
     <div className="p-4">
-      <BackButton />
-      <h1 className="my-4 text-2xl">Article Details</h1>
       {loading ? (
         <Spinner />
       ) : (
-        <div className="flex flex-col p-10 rounded-xl w-fit bg-blue-300">
+        <div className="flex flex-col p-10 rounded-xl w-fit bg-blue-300 mx-40 my-12">
+        <BackButton />
           <div className="flex my-2 text-base justify-center">
-            <span className="text-black text-4xl">{article.name}</span>
+            <span style={{fontFamily: "oleo"}} className="text-black text-6xl font-normal">{article.name}</span>
           </div>
-          <h2 className="text-black text-2xl">Quick Info:</h2>
+          <h2 className="text-black text-2xl font-bold">Quick Info:</h2>
           <div className="my-2">
             <span className="mr-4 text-lg text-black underline">Category:</span>
             <span>{article.category}</span>
@@ -63,7 +62,7 @@ const ShowArticle = () => {
             <span className="mr-4 text-lg text-black underline">Notable Work:</span>
             <span>{article.notable_work}</span>
           </div>
-          <h2 className="text-black text-2xl">About:</h2>
+          <h2 className="text-black text-2xl font-bold">About:</h2>
           <div className="my-2 text-base">
             <span>{article.about}</span>
           </div>

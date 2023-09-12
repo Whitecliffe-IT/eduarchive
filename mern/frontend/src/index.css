@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: "typo3";
+    src: url(./assets/typo3-medium.ttf);
+}
+@font-face {
+    font-family: "oleo";
+    src: url(./assets/OleoScript-Regular.ttf);
+}
