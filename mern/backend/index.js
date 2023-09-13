@@ -5,6 +5,23 @@ const express = require("express");
 const mongoose = require("mongoose");
 const articleRoutes = require("./routes/articleRoutes");
 const cors = require("cors");
+const jwksRsa = require('jwks-rsa');
+const jwt = require('express-jwt');
+
+// Validate the audience and issuer from your Auth0 application
+const checkJwt = jwt({
+  audience: 'http://localhost:3000/',
+  issuer: 'dev-v2m16sx7yuxjnf7l.us.auth0.com',
+  algorithms: ['RS256'],
+  secret: jwksRsa.expressJwtSecret({
+    cache: true,
+    rateLimit: true,
+    jwksRequestsPerMinute: 5,
+    jwksUri: 'https://dev-v2m16sx7yuxjnf7l.us.auth0.com/.well-known/jwks.json',
+  }),
+});
+
+module.exports = checkJwt;
 
 // Get environment variables
 const MONGO_STRING = process.env.MONGO_STRING;

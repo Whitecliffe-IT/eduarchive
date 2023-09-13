@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const ArticleModel = require("../models/articles");
+const checkJwt = require("../index");
+const authz = require('express-jwt-authz');
 
 // Get all articles
-router.get("/", async (req, res) => {
+router.get("/", checkJwt, authz(['read:article']), async (req, res) => {
   try {
     const articles = await ArticleModel.find();
     res.json({
@@ -17,7 +19,7 @@ router.get("/", async (req, res) => {
 });
 
 // Get one article by id
-router.get("/:id", async (req, res) => {
+router.get("/:id", checkJwt, authz(['read:article']), async (req, res) => {
   try {
     const { id } = req.params;
     const article = await ArticleModel.findById(id);
@@ -32,7 +34,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Create a new article
-router.post("/", async (req, res) => {
+router.post("/", checkJwt, authz(['create:article']), async (req, res) => {
   const {
     category,
     type,
@@ -77,7 +79,23 @@ router.post("/", async (req, res) => {
 });
 
 // Update an article
-router.put("/:id", async (req, res) => {
+// router.put("/:id", async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const article = await ArticleModel.findByIdAndUpdate(id, req.body, {
+//       new: true,
+//     });
+//     if (!article) {
+//       return res.status(404).json({ message: "Article not found!" });
+//     }
+//     res.status(200).json(article);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: error.message });
+//   }
+// });
+
+router.put("/:id", checkJwt, authz(['update:article']), async (req, res) => {
   try {
     const { id } = req.params;
     const article = await ArticleModel.findByIdAndUpdate(id, req.body, {
@@ -94,7 +112,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete an article
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", checkJwt, authz(['delete:article']), async (req, res) => {
   try {
     const { id } = req.params;
     const article = await ArticleModel.findByIdAndDelete(id);
