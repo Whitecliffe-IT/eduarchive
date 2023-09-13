@@ -37,13 +37,13 @@ const ArticleTable = ({ articles }) => {
             <td className="text-center border rounded-sm border-slate-700">
               <div className="flex justify-center gap-x-4">
                 <Link to={`/articles/details/${article._id}`}>
-                  <BsInfoCircle className="text-2xl text-green-600" />
+                  <BsInfoCircle className="text-2xl text-green-600 hover:text-black" />
                 </Link>
                 <Link to={`/articles/edit/${article._id}`}>
-                  <AiOutlineEdit className="text-2xl text-yellow-600" />
+                  <AiOutlineEdit className="text-2xl text-yellow-600 hover:text-black" />
                 </Link>
                 <Link to={`/articles/delete/${article._id}`}>
-                  <MdOutlineDelete className="text-2xl text-red-600" />
+                  <MdOutlineDelete className="text-2xl text-red-600 hover:text-black" />
                 </Link>
               </div>
             </td>

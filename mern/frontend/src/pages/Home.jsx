@@ -49,13 +49,13 @@ const Home = () => {
       </div>
       <div className="flex items-center gap-x-4">
         <button
-          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-400"
           onClick={() => setShowType("cards")}
         >
           Cards
         </button>
         <button
-          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-400"
           onClick={() => setShowType("table")}
         >
           Table
