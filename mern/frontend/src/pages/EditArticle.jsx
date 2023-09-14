@@ -111,7 +111,7 @@ const EditArticle = () => {
             <h1 style={{fontFamily: "typo3"}} className="my-4 text-4xl font">Edit Article</h1>
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Category</label>
+            <label className="mr-4 text-base text-white">Category</label>
             <input
               type="text"
               value={category}
@@ -120,7 +120,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Type</label>
+            <label className="mr-4 text-base text-white">Type</label>
             <input
               type="text"
               value={type}
@@ -129,7 +129,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Name</label>
+            <label className="mr-4 text-base text-white">Name</label>
             <input
               type="text"
               value={name}
@@ -138,7 +138,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Born</label>
+            <label className="mr-4 text-base text-white">Born</label>
             <input
               type="text"
               value={born}
@@ -147,7 +147,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Died</label>
+            <label className="mr-4 text-base text-white">Died</label>
             <input
               type="text"
               value={died}
@@ -156,7 +156,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Nationality</label>
+            <label className="mr-4 text-base text-white">Nationality</label>
             <input
               type="text"
               value={nationality}
@@ -165,7 +165,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Known For</label>
+            <label className="mr-4 text-base text-white">Known For</label>
             <input
               type="text"
               value={known_for}
@@ -174,7 +174,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Notable Work</label>
+            <label className="mr-4 text-base text-white">Notable Work</label>
             <input
               type="text"
               value={notable_work}
@@ -183,7 +183,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">About</label>
+            <label className="mr-4 text-base text-white">About</label>
             <input
               type="text"
               value={about}
@@ -192,7 +192,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Year</label>
+            <label className="mr-4 text-base text-white">Year</label>
             <input
               type="text"
               value={year}
@@ -201,7 +201,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Medium</label>
+            <label className="mr-4 text-base text-white">Medium</label>
             <input
               type="text"
               value={medium}
@@ -210,7 +210,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Dimensions</label>
+            <label className="mr-4 text-base text-white">Dimensions</label>
             <input
               type="text"
               value={dimensions}
@@ -219,7 +219,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Location</label>
+            <label className="mr-4 text-base text-white">Location</label>
             <input
               type="text"
               value={location}
@@ -228,7 +228,7 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Designed By</label>
+            <label className="mr-4 text-base text-white">Designed By</label>
             <input
               type="text"
               value={designed_by}
@@ -237,7 +237,8 @@ const EditArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-black">Developer</label>
+            <label className="mr-4 text-base text-white
+              ">Developer</label>
             <input
               type="text"
               value={developer}
