@@ -60,7 +60,7 @@ const CreateArticle = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="flex flex-col max-w-screen-lg p-10 mx-auto bg-blue-400 rounded-xl">
+        <div className="flex flex-col max-w-screen-lg p-10 mx-auto bg-blue-300 rounded-xl">
           <div className="my-1">
             <div className="flex justify-center">
               <h1 style={{fontFamily: "typo3"}} className="my-4 text-4xl font">Create Article</h1>
