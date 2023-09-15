@@ -25,14 +25,16 @@ const DeleteArticle = () => {
   return (
     <div className="p-4">
       <BackButton />
-      <h1 className="my-4 text-2xl">Delete Article</h1>
       {loading ? <Spinner /> : ""}
-      <div className="flex flex-col items-center max-w-screen-lg p-4 mx-auto border-2 border-green-600 rounded-xl">
+      <div className="flex flex-col items-center max-w-screen-lg p-10 bg-blue-300 mx-auto rounded-xl">
+        <div className="flex justify-center">
+          <h1 style={{fontFamily: "typo3"}} className="my-4 text-4xl font">Delete Article</h1>
+        </div>
         <h3 className="text-xl">
           Are you sure you want to delete this article?
         </h3>
         <button
-          className="w-full p-2 m-4 text-white bg-red-600 rounded-md"
+          className="w-full p-2 m-4 text-black bg-red-600 hover:bg-red-500 rounded-md"
           onClick={handleDeleteArticle}
         >
           Yes, delete it!

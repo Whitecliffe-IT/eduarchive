@@ -57,13 +57,15 @@ const CreateArticle = () => {
   return (
     <div className="p-4">
       <BackButton />
-      <h1 className="my-4 text-2xl">Create Article</h1>
       {loading ? (
         <Spinner />
       ) : (
-        <div className="flex flex-col max-w-screen-lg p-2 mx-auto border-2 border-green-600 rounded-xl">
+        <div className="flex flex-col max-w-screen-lg p-10 mx-auto bg-blue-300 rounded-xl">
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Category</label>
+            <div className="flex justify-center">
+              <h1 style={{fontFamily: "typo3"}} className="my-4 text-4xl font">Create Article</h1>
+            </div>
+            <label className="mr-4 text-base text-black">Category</label>
             <input
               type="text"
               value={category}
@@ -72,7 +74,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Type</label>
+            <label className="mr-4 text-base text-black">Type</label>
             <input
               type="text"
               value={type}
@@ -81,7 +83,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Name</label>
+            <label className="mr-4 text-base text-black">Name</label>
             <input
               type="text"
               value={name}
@@ -90,7 +92,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Born</label>
+            <label className="mr-4 text-base text-black">Born</label>
             <input
               type="text"
               value={born}
@@ -99,7 +101,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Died</label>
+            <label className="mr-4 text-base text-black">Died</label>
             <input
               type="text"
               value={died}
@@ -108,7 +110,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Nationality</label>
+            <label className="mr-4 text-base text-black">Nationality</label>
             <input
               type="text"
               value={nationality}
@@ -117,7 +119,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Known For</label>
+            <label className="mr-4 text-base text-black">Known For</label>
             <input
               type="text"
               value={known_for}
@@ -126,7 +128,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Notable Work</label>
+            <label className="mr-4 text-base text-black">Notable Work</label>
             <input
               type="text"
               value={notable_work}
@@ -135,7 +137,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">About</label>
+            <label className="mr-4 text-base text-black">About</label>
             <input
               type="text"
               value={about}
@@ -144,7 +146,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Year</label>
+            <label className="mr-4 text-base text-black">Year</label>
             <input
               type="text"
               value={year}
@@ -153,7 +155,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Medium</label>
+            <label className="mr-4 text-base text-black">Medium</label>
             <input
               type="text"
               value={medium}
@@ -162,7 +164,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Dimensions</label>
+            <label className="mr-4 text-base text-black">Dimensions</label>
             <input
               type="text"
               value={dimensions}
@@ -171,7 +173,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Location</label>
+            <label className="mr-4 text-base text-black">Location</label>
             <input
               type="text"
               value={location}
@@ -180,7 +182,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Designed By</label>
+            <label className="mr-4 text-base text-black">Designed By</label>
             <input
               type="text"
               value={designed_by}
@@ -189,7 +191,7 @@ const CreateArticle = () => {
             />
           </div>
           <div className="my-1">
-            <label className="mr-4 text-base text-gray-500">Developer</label>
+            <label className="mr-4 text-base text-black">Developer</label>
             <input
               type="text"
               value={developer}
@@ -198,7 +200,7 @@ const CreateArticle = () => {
             />
           </div>
           <button
-            className="p-2 my-1 text-white bg-green-600 rounded-md"
+            className="p-2 my-1 text-black bg-green-600 hover:bg-green-400 rounded-md"
             onClick={handleSaveArticle}
           >
             Save

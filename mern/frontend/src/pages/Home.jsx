@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-import { AiOutlineEdit } from "react-icons/ai";
-import { BsInfoCircle } from "react-icons/bs";
-import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import { MdOutlineAddBox } from "react-icons/md";
 import ArticleTable from "../components/ArticleTable";
 import ArticleCard from "../components/ArticleCard";
 import SearchBar from '../components/SearchBar';
@@ -14,8 +12,8 @@ const Home = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("cards");
-  const [searchKeyword, setSearchKeyword] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const categories = ["Arts", "Mathematics", "Technology"];
 
   useEffect(() => {
@@ -33,8 +31,11 @@ const Home = () => {
   }, []);
 
   const filteredArticles = articles.filter((article) => {
-    const keywordMatch = article.name.toLowerCase().includes(searchKeyword.toLowerCase());
-    const categoryMatch = !selectedCategory || article.category === selectedCategory;
+    const keywordMatch = article.name
+      .toLowerCase()
+      .includes(searchKeyword.toLowerCase());
+    const categoryMatch =
+      !selectedCategory || article.category === selectedCategory;
     return keywordMatch && categoryMatch;
   });
 
@@ -48,32 +49,34 @@ const Home = () => {
       </div>
       <div className="flex items-center gap-x-4">
         <button
-          className="px-4 py-1 bg-green-300 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-400"
           onClick={() => setShowType("cards")}
         >
           Cards
         </button>
         <button
-          className="px-4 py-1 bg-green-300 rounded-lg hover:bg-green-600"
+          className="px-4 py-1 bg-green-600 rounded-lg hover:bg-green-400"
           onClick={() => setShowType("table")}
         >
           Table
         </button>
       </div>
 
-      <div className="flex gap-4 mt-4">
-        <CategoryFilter categories={categories} onSelectCategory={setSelectedCategory} />
-        <SearchBar onSearch={setSearchKeyword} />
-      </div>
+        <div className="flex gap-4 border-b-2 border-gray-400 h-10 justify-center">
+          <CategoryFilter
+            categories={categories}
+            onSelectCategory={setSelectedCategory}
+          />
+          <SearchBar onSearch={setSearchKeyword} />
+        </div>
 
-
-      {loading ? (
-        <Spinner />
-      ) : showType === "cards" ? (
-        <ArticleCard articles={filteredArticles} />
-      ) : (
-        <ArticleTable articles={filteredArticles} />
-      )}
+        {loading ? (
+          <Spinner />
+        ) : showType === "cards" ? (
+          <ArticleCard articles={filteredArticles} />
+        ) : (
+          <ArticleTable articles={filteredArticles} />
+        )}
     </div>
   );
 };
