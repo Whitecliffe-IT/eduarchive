@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const ArticleModel = require("../models/articles");
 const checkJwt = require("../index");
+
 const authz = require('express-jwt-authz');
 
 // Get all articles
-router.get("/", checkJwt, authz(['read:article']), async (req, res) => {
+router.get("/", async (req, res) => {
   try {
+    const {access_token} = req.oauth
     const articles = await ArticleModel.find();
     res.json({
       count: articles.length,

@@ -7,6 +7,7 @@ const articleRoutes = require("./routes/articleRoutes");
 const cors = require("cors");
 const jwksRsa = require('jwks-rsa');
 const jwt = require('express-jwt');
+const oAuth = require('./middleware/auth')
 
 // Validate the audience and issuer from your Auth0 application
 const checkJwt = jwt({
@@ -45,6 +46,10 @@ database.once("connected", () => {
 
 // Create express app
 const app = express();
+
+const articlesAPIEndpoint = "http://localhost:3000/articles"
+
+app.use(oAuth);
 
 // Middleware for parsing JSON and handling CORS policy
 app.use(express.json());
